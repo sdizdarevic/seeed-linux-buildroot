@@ -22,7 +22,8 @@ jobs:
           sudo -E apt-get -qq update
           sudo -E apt-get install sed make binutils build-essential gcc g++ bash patch \
           gzip bzip2 perl tar cpio unzip rsync file bc wget python cvs git \
-          mercurial subversion
+          mercurial subversion libfontconfig1 fontconfig libfontconfig1-dev \
+          fontconfig-config libxi-dev libaudio-dev libxrender-dev
           
       - name: Checkout Buildroot sources
         run: git clone --depth=1 -b master https://github.com/Seeed-Studio/seeed-linux-buildroot.git
