@@ -11,6 +11,11 @@ env:
   MERGE_ARGS: ""
   # Optional push arguments
   PUSH_ARGS: ""
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 
 # This runs every sunday on 0000 UTC
 on:
