@@ -3,6 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 0 0 * * 1,2,3,4,5
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  contents: write
 
 env:
   TZ: Asia/Shanghai
@@ -23,7 +28,7 @@ jobs:
         run: git clone --depth=1 -b master https://github.com/Seeed-Studio/seeed-linux-buildroot.git
 
       - name: Seeed buildroot cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-download-files
         with:
