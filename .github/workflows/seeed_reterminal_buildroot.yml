@@ -14,7 +14,7 @@ env:
 
 jobs:
   build:
-    runs-on: latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Initialization environment
