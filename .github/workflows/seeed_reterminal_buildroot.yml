@@ -34,7 +34,7 @@ jobs:
           cache-name: cache-download-files
         with:
           path: ${{ github.workspace }}/seeed-linux-buildroot/dl/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/seeed-linux-buildroot/configs/reTerminal_32_defconfig') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/seeed-linux-buildroot/configs/reTerminal_642_defconfig') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -43,7 +43,7 @@ jobs:
       - name: Configure Buildroot
         run: |
           cd ${{ github.workspace }}/seeed-linux-buildroot/
-          make reTerminal_32_defconfig
+          make reTerminal_64_defconfig
 
       - name: Build
         run: |
